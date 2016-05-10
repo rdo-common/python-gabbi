@@ -67,7 +67,7 @@ BuildRequires:  python-coverage
 Gabbi is a tool for running HTTP tests where requests and responses
 are represented in a declarative YAML-based form.
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %package -n python3-%{pypi_name}
 Summary:        Declarative HTTP testing library
 %{?python_provide:%python_provide python3-%{pypi_name}}
@@ -119,7 +119,7 @@ Documentation for the gabbi module
 
 %build
 %py2_build
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %py3_build
 %endif
 
@@ -151,7 +151,7 @@ rm -rf html/.{doctrees,buildinfo}
 # some tests are broken so bypassing tests
 %{__python2} setup.py test ||
 rm -fr .testrepository
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %{__python3} setup.py test ||
 %endif
 
@@ -168,7 +168,7 @@ rm -fr .testrepository
 %exclude %{python2_sitelib}/gabbi/tests/gabbits_intercept/horse
 
 
-%if 0%{with_python3}
+%if 0%{?with_python3}
 %files -n python3-%{pypi_name}
 %doc README.rst
 %license LICENSE
