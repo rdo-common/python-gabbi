@@ -1,7 +1,5 @@
 %global pypi_name gabbi
 %global pypi gabbi-run
-# FIXME: pypi now uses the tarball md5 hash to generate download urls
-%global pypi_hash b5/aa/4965d98556a6acdd4fa4f2f6ddc44cc5df7749df7fe78394662e60f24203
 
 %if 0%{?fedora}
 %global with_python3 1
@@ -18,13 +16,13 @@
 
 
 Name:           python-%{pypi_name}
-Version:        1.19.1
+Version:        1.21.0
 Release:        1%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
 URL:            https://github.com/cdent/gabbi
-Source0:        https://pypi.python.org/packages/%{pypi_hash}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/g/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 
@@ -190,6 +188,9 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Mon Jun  6 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.21.0-1
+- Upstream 1.21.0
+
 * Wed Jun  1 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.19.1-1
 - Upstream 1.19.1
 - Add IPv6 support
