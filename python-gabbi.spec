@@ -16,7 +16,7 @@
 
 
 Name:           python-%{pypi_name}
-Version:        1.21.0
+Version:        1.22.0
 Release:        1%{?dist}
 Summary:        Declarative HTTP testing library
 
@@ -188,6 +188,9 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Tue Jun 14 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.22.0-1
+- Upstream 1.22.0
+
 * Mon Jun  6 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.21.0-1
 - Upstream 1.21.0
 
