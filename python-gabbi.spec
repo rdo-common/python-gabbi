@@ -17,7 +17,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.22.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
@@ -188,6 +188,9 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.22.0-2
+- https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
+
 * Tue Jun 14 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.22.0-1
 - Upstream 1.22.0
 
