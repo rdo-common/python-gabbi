@@ -17,7 +17,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.27.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
@@ -188,6 +188,9 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Mon Dec 19 2016 Miro Hrončok <mhroncok@redhat.com> - 1.27.0-2
+- Rebuild for Python 3.6
+
 * Thu Oct 13 2016 Alan Pevec <alan.pevec@redhat.com> 1.27.0-1
 - Update to 1.27.0
 
