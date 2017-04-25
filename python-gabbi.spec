@@ -16,8 +16,8 @@
 
 
 Name:           python-%{pypi_name}
-Version:        1.27.0
-Release:        3%{?dist}
+Version:        1.33.0
+Release:        1%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
@@ -188,6 +188,9 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Tue Apr 25 2017 Haïkel Guémar <hguemar@fedoraproject.org> - 1.33.0-1
+- Upstream 1.33.0
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.27.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
