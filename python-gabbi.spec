@@ -17,7 +17,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.33.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
@@ -35,33 +35,33 @@ Summary:        Declarative HTTP testing library
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
 BuildRequires:       python2-devel
-BuildRequires:       python-setuptools
-BuildRequires:       python-six
-BuildRequires:       python-pbr
-BuildRequires:       python-httplib2
-BuildRequires:       python-wsgi_intercept
-BuildRequires:       python-colorama
-BuildRequires:       python-jsonpath-rw-ext
-BuildRequires:       PyYAML
-BuildRequires:       pytest
-BuildRequires:       python-urllib3
+BuildRequires:       python2-setuptools
+BuildRequires:       python2-six
+BuildRequires:       python2-pbr
+BuildRequires:       python2-httplib2
+BuildRequires:       python2-wsgi_intercept
+BuildRequires:       python2-colorama
+BuildRequires:       python2-jsonpath-rw-ext
+BuildRequires:       python2-pyyaml
+BuildRequires:       python2-pytest
+BuildRequires:       python2-urllib3
 
 
-Requires:       python-setuptools
-Requires:       python-six
-Requires:       python-pbr
-Requires:       python-wsgi_intercept
-Requires:       python-colorama
-Requires:       python-jsonpath-rw-ext
-Requires:       pytest
-Requires:       PyYAML
-Requires:       python-urllib3
+Requires:       python2-setuptools
+Requires:       python2-six
+Requires:       python2-pbr
+Requires:       python2-wsgi_intercept
+Requires:       python2-colorama
+Requires:       python2-jsonpath-rw-ext
+Requires:       python2-pytest
+Requires:       python2-pyyaml
+Requires:       python2-urllib3
 
 
 # test requirements
-BuildRequires:  python-mock
-BuildRequires:  python-testrepository
-BuildRequires:  python-coverage
+BuildRequires:  python2-mock
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-coverage
 
 %description -n python2-%{pypi_name}
 Gabbi is a tool for running HTTP tests where requests and responses
@@ -107,8 +107,8 @@ are represented in a declarative YAML-based form.
 %package -n python-%{pypi_name}-doc
 Summary:        Documentation for the gabbi module
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-sphinx_rtd_theme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-sphinx_rtd_theme
 
 Requires:   python2-%{pypi_name}
 %description -n python-%{pypi_name}-doc
@@ -188,6 +188,10 @@ rm -fr .testrepository
 %license LICENSE
 
 %changelog
+* Mon Mar 26 2018 Iryna Shcherbina <ishcherb@redhat.com> - 1.33.0-4
+- Update Python 2 dependency declarations to new packaging standards
+  (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
+
 * Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.33.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
