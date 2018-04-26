@@ -38,11 +38,11 @@ BuildRequires:       python2-devel
 BuildRequires:       python2-setuptools
 BuildRequires:       python2-six
 BuildRequires:       python2-pbr
-BuildRequires:       python2-httplib2
+BuildRequires:       python-httplib2
 BuildRequires:       python2-wsgi_intercept
 BuildRequires:       python2-colorama
 BuildRequires:       python2-jsonpath-rw-ext
-BuildRequires:       python2-pyyaml
+BuildRequires:       PyYAML
 BuildRequires:       python2-pytest
 BuildRequires:       python2-urllib3
 
@@ -54,7 +54,7 @@ Requires:       python2-wsgi_intercept
 Requires:       python2-colorama
 Requires:       python2-jsonpath-rw-ext
 Requires:       python2-pytest
-Requires:       python2-pyyaml
+Requires:       PyYAML
 Requires:       python2-urllib3
 Requires:       python2-testtools
 
