@@ -17,7 +17,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.42.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Declarative HTTP testing library
 
 License:        ASL 2.0
@@ -56,7 +56,7 @@ Requires:       python2-jsonpath-rw-ext
 Requires:       python2-pytest
 Requires:       python2-pyyaml
 Requires:       python2-urllib3
-
+Requires:       python2-testtools
 
 # test requirements
 BuildRequires:  python2-mock
@@ -93,6 +93,7 @@ Requires:       python3-jsonpath-rw-ext
 Requires:       python3-pytest
 Requires:       python3-PyYAML
 Requires:       python3-urllib3
+Requires:       python3-testtools
 
 # test requirements
 BuildRequires:  python3-mock
@@ -188,6 +189,9 @@ rm -rf html/.{doctrees,buildinfo}
 %license LICENSE
 
 %changelog
+* Thu Apr 26 2018 Chandan Kumar <chkumar@redhat.com> - 1.42.1-2
+- Added missed python-testtools requirements
+
 * Wed Apr 25 2018 Chandan Kumar <chkumar@redhat.com> - 1.42.1-1
 - Bump to version 1.42.1
 - Resolves rhbz#1434385
